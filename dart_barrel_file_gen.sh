@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# script to generate barrel dart file of all sibbling files in current folder
+
+# usage >> `dart_barrel_file_gen.sh barrel_filename.dart``
+
 # NOTE: Run below command first time to grant permission to this script to run from anywhere
 # chmod +x ~/scripts/dart_barrel_file_gen.sh
 
