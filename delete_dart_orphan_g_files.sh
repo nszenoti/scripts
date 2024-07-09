@@ -56,9 +56,16 @@ ls_rmt_orphan_g_files() {
             # Find all *.g.dart files
             for g_file in "${orphan_files[@]}"; do
                 # Instead of permanent delete (delete it temporary i.e move it to trash (hence safer))
-                # rm -f "$g_file"
                 echo "Deleting $g_file"
-                mv "$g_file" ~/.Trash/   # Move the file to the Trash ( = cmd + del)
+                rm -f "$g_file"
+
+                #mv "$g_file" ~/.Trash/   # Move the file to the Trash ( = cmd + del)
+                #sudo mv -f "$g_file" ~/.Trash/   # Move the file to the Trash ( = cmd + del)
+                #osascript -e "tell application \"Finder\" to delete POSIX file \"$g_file\""
+                #local file_path=$(osascript -e 'POSIX path of "'"$g_file"'"' | sed 's/ /\\ /g')
+                #osascript -e "tell application \"Finder\" to delete POSIX file \"$file_path\""
+                # echo "Moved $file_path to Trash"
+                # echo "Moved $file to Trash"
             done
             echo "$orphan_count Orphaned files deleted & moved to trash."
         else
