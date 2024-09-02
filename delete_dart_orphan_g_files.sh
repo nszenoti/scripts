@@ -67,7 +67,7 @@ ls_rmt_orphan_g_files() {
                 # echo "Moved $file_path to Trash"
                 # echo "Moved $file to Trash"
             done
-            echo "$orphan_count Orphaned files deleted & moved to trash."
+            echo "$orphan_count Orphaned files deleted (permanently)."
         else
             echo "Deletion canceled."
         fi
